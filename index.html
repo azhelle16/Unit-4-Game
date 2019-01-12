@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Application: Crystal Collector</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./assets/javascript/game.js"></script>
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<img src="./assets/images/cclogo.png" height="80" width="40%">
+		<!-- <img src="./assets/images/qmark.png" height="80" id="info" data-toggle="modal" href="#infoModal"> -->
+		<button style="background: url('./assets/images/qmark.png') no-repeat; background-size: 80px 80px" data-toggle="modal" data-target=".modal" class="info" id="info"></button>
+	</header>
+	<!-- main container -->
+	<div id="mainContainer">
+		<div id="crystalImgs">
+			<button style="background: url('./assets/images/blue.png') no-repeat; background-size: 100px 100px" class="crys" value="blue"></button>
+			<button style="background: url('./assets/images/red.png') no-repeat; background-size: 100px 100px" class="crys" value="red"></button>
+			<button style="background: url('./assets/images/yellow.png') no-repeat; background-size: 100px 100px" class="crys" value="yellow"></button>
+			<button style="background: url('./assets/images/green.png') no-repeat; background-size: 100px 100px" class="crys" value="green"></button>
+		</div>
+		<div id="toGuess" class="fleft">
+			<h2>NUMBER TO MATCH</h2>
+			<span id="tg"></span>	
+		</div>
+		<div id="userGuess" class="fright">
+			<h2>SCORE</h2>
+			<span id="ug">0</span>	
+		</div>
+		<table>
+			<tr>
+				<th>WINS</th>
+				<th>LOSSES</th>
+				<th rowspan="2" colspan="2">
+					<button type="button" class="resetButton">RESET</button>
+					<button type="button" class="resetButton">UNDO LAST MOVE</button>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<span id="totalWins">0</span>
+				</td>
+				<td>
+					<span id="totalLoss">0</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!-- footer -->
+	<footer>
+		Copyright &copy;<br>
+	</footer>	
+	<!-- dialog box -->
+	<div class="modal" tabindex="-1" role="dialog" id="infoModal">
+  		<div class="modal-dialog" role="document">
+  			<div class="modal-content">
+   		  		<div class="modal-header">
+        			<h5 class="modal-title">HOW TO PLAY</h5>
+        			<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+         				<!-- <span aria-hidden="true">&times;</span> -->
+        			<!-- </button> -->
+      			</div>
+     			<div class="modal-body">
+     		   		<p>You will be given a random number at the start of the game.</p>
+     		   		<p>There are four crystals to play with. By clicking on a crystal, it will add a specific amount of points to your score.</p>
+     		   		<p>You win the game by matching your total score to the random number. Otherwise, you lose the game if your total score goes above the random number.</p>
+     		   		<p>The value of each crystal is hidden from you until you click on it.</p>
+     		   		<p>Each time the game starts, the game will change the value of each crystal.</p>
+      			</div>
+      			<div class="modal-footer">
+        			<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        			<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        			<button type="button" class="btn btn-primary" data-dismiss="modal">Got It!</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+</body>
+</html>

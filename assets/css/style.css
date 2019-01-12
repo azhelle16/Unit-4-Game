@@ -1,0 +1,161 @@
+/* GENERAL */
+
+body {
+	background-image: url("../images/gravel.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	text-align: center;
+	margin: 0;
+}
+
+/* HEADER */
+
+header {
+	background-color: #4B0082;
+	border-bottom: 8px solid #000;
+	height: 100px;
+	margin; 0;
+}
+
+header img:first-child {
+	margin-top: 10px;
+	margin-left: 100px;
+}
+
+header button {
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px; 
+	cursor: pointer;
+	height: 80px;
+	width: 80px;
+	border: 0px solid red;
+}
+
+/* MAIN CONTAINER */
+
+#mainContainer {
+	min-height: 0px;
+	border: 1px #dddddd solid;
+	width: 960px;
+	background-color: #ffffff;
+	overflow: auto;
+	position: relative;
+	margin: 20px auto;
+}
+
+.crys {
+	height: 100px;
+	width: 100px;
+	margin: 0 15px;
+	cursor: pointer;
+	border: 0px solid red;
+}
+
+
+#crystalImgs {
+	margin-top: 40px;
+}
+
+#toGuess, #userGuess {
+	border-radius: 10px;
+	border: 3px solid #4B0082;
+	background-color: #8A2BE2;	
+	width: 350px;
+	height: 200px;
+	margin: 40px auto;
+	color: white;
+	padding-top: 20px;
+	line-height: 100px;
+}
+
+#tg, #ug {
+	font-size: 90px;
+}
+
+#toGuess {
+	margin-left: 60px;
+}
+
+#userGuess {
+	margin-right: 60px;
+}
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+table {
+	width: 95%;
+	text-align: center;
+	margin: 40px 20px;
+	border-collapse: collapse;
+ 	table-layout: fixed;
+}
+
+td {
+	padding: 10px 0;
+	font-size: 30px;
+	border: 3px solid black;
+}
+
+th {
+	padding: 10px 0;
+	border: 3px solid black;
+	background: #00c5ff;
+	color: white;
+}
+
+table th:last-child {
+	border-top: 0;
+	border-bottom: 0;
+	border-right: 0;
+	width: 40%;
+	background: none;
+}
+
+.resetButton {
+	width: auto;
+    height: 50px;
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #4B0082;
+    font-size: 20px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    cursor: pointer;
+
+}
+
+/* FOOTER */
+
+footer {
+	border-top: 8px solid #000;
+	background-color: #4B0082;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+/* DIALOG */
+
+.modal-header {
+	background-color: #4B0082;
+	color: white;
+}
+
+.modal-title {
+	text-align: center;
+	width: 100%;
+}
