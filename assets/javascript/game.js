@@ -127,7 +127,7 @@ function initializeButtonFunction() {
 		if ($(this).hasClass("crys")) {
 			var color = $(this).attr("value");
 			//cryst.score += parseInt($(this).attr("value"));
-			console.log(cryst[color])
+			//console.log(cryst[color])
 			lastNum = cryst[color];
 			cryst.score += cryst[color];
 			// cryst.score = cryst.match
@@ -136,16 +136,18 @@ function initializeButtonFunction() {
 				cryst.totalLoss++
 				$("#totalLoss").text(cryst.totalLoss)
 				$("#ug").css("color","#ff3232")
+				$("#wrongAudio").trigger("play");
 				setTimeout(function() {
 					reset("0")
-				},1500);
+				},1000);
 			} else if (cryst.score == cryst.match) {
 				cryst.totalWins++
 				$("#totalWins").text(cryst.totalWins)
 				$("#ug").css("color","#b2ffb2")
+				$("#correctAudio").trigger("play");
 				setTimeout(function() {
 					reset("0")
-				},1500);
+				},1000);
 			  }
 		} else {
 			if ($(this).text().toLowerCase() == "reset") {
