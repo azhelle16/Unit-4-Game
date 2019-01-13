@@ -130,6 +130,7 @@ function initializeButtonFunction() {
 			//console.log(cryst[color])
 			lastNum = cryst[color];
 			cryst.score += cryst[color];
+			$(".undoButton").attr("disabled",false);
 			// cryst.score = cryst.match
 			$("#ug").text(cryst.score)
 			if (cryst.score > cryst.match) {
@@ -155,6 +156,7 @@ function initializeButtonFunction() {
 			} else {
 				cryst.score -= lastNum;
 				$("#ug").text(cryst.score);
+				$(this).attr("disabled",true);
 			  }
 		  }
 	})
@@ -183,6 +185,7 @@ function reset(flag) {
 		cryst.totalLoss = 0;
 		$("#totalWins").text(cryst.totalWins);
 		$("#totalLoss").text(cryst.totalLoss);
+
 	}
 
 	cryst.score = 0;
@@ -191,5 +194,5 @@ function reset(flag) {
 	$("#ug").css("color","white")
 	generateNumberToGuess();
 	generateCrystalValue();
-	
+	$(".undoButton").attr("disabled",true)	
 }

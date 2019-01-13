@@ -119,7 +119,7 @@ table th:last-child {
 	background: none;
 }
 
-.resetButton {
+.resetButton, .undoButton {
 	width: auto;
     height: 50px;
     padding: 5px 10px;
@@ -133,6 +133,10 @@ table th:last-child {
     font-family: 'Georgia', Times, Times New Roman, serif;
     cursor: pointer;
 
+}
+
+.undoButton[disabled] {
+	opacity: 0.5;
 }
 
 /* FOOTER */
