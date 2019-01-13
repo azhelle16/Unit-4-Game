@@ -113,8 +113,8 @@ function generateCrystalValue() {
  #  AUTHOR        : Maricel Louise Sumulong
  #  DATE          : January 10, 2019 PST
  #  MODIFIED BY   : Maricel Louise Sumulong
- #  REVISION DATE : January 12, 2019 PST
- #  REVISION #    : 2
+ #  REVISION DATE : January 13, 2019 PST
+ #  REVISION #    : 3
  #  DESCRIPTION   : initialize the buttons functionality
  #  PARAMETERS    : none
  #
@@ -153,7 +153,7 @@ function initializeButtonFunction() {
 		} else {
 			if ($(this).text().toLowerCase() == "reset") {
 				reset("1");
-			} else {
+			} else if ($(this).text().toLowerCase() == "undo last move"){
 				cryst.score -= lastNum;
 				$("#ug").text(cryst.score);
 				$(this).attr("disabled",true);
